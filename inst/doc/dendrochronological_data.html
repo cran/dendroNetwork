@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>dendrochronological data</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+}
+.hanging div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}
+</style>
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">dendrochronological data</h1>
+
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(dendroNetwork)</span></code></pre></div>
+<div id="dendrochronological-data-or-tree-ring-data" class="section level1">
+<h1>Dendrochronological data (or tree-ring data)</h1>
+<p>The package dendroNetwork is based on using dendrochronological (or
+tree-ring) data. This data is the input for creating networks and uses
+the same data format as used in dplR <span class="citation">(Bunn
+2008)</span>. The base format is rwl-format as described here: <a href="https://www.ncei.noaa.gov/pub/data/paleo/treering/treeinfo.txt" class="uri">https://www.ncei.noaa.gov/pub/data/paleo/treering/treeinfo.txt</a>.
+This data can be imported into R using
+<code>dplR::read.tucson(&quot;filename.rwl&quot;)</code> . The resulting dataframe
+has the series in columns and the years as rows, as shown below for a
+selection of data from one of the sample data sets in
+<code>dendroNetwork::hol_rom[400:410,1:4]</code> :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">HOL_AAHOH</th>
+<th align="right">HOL_ALT2H</th>
+<th align="right">HOL_BDN2H</th>
+<th align="right">HOL_BENGH</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">-103</td>
+<td align="right">0.96</td>
+<td align="right">NA</td>
+<td align="right">1.15</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">-102</td>
+<td align="right">0.80</td>
+<td align="right">NA</td>
+<td align="right">0.95</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">-101</td>
+<td align="right">0.76</td>
+<td align="right">NA</td>
+<td align="right">0.89</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">-100</td>
+<td align="right">0.69</td>
+<td align="right">NA</td>
+<td align="right">0.76</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">-99</td>
+<td align="right">0.91</td>
+<td align="right">NA</td>
+<td align="right">0.74</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">-98</td>
+<td align="right">0.94</td>
+<td align="right">NA</td>
+<td align="right">0.79</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">-97</td>
+<td align="right">0.90</td>
+<td align="right">NA</td>
+<td align="right">0.72</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">-96</td>
+<td align="right">0.68</td>
+<td align="right">NA</td>
+<td align="right">0.96</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">-95</td>
+<td align="right">0.68</td>
+<td align="right">NA</td>
+<td align="right">0.70</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">-94</td>
+<td align="right">0.69</td>
+<td align="right">NA</td>
+<td align="right">0.62</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">-93</td>
+<td align="right">0.86</td>
+<td align="right">NA</td>
+<td align="right">0.77</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+<p>The row names are the years to which the tree rings are dated, in
+this case the years -103 to -93, in other words 102 to 92 BCE (the year
+0 does not exist, only mathematically). The column headers are the
+identification or names of the tree-ring series. The values represent
+the width of a tree ring in millimeters. While dendroNetwork is written
+based on measurements of tree-ring widths, other time series with a
+similar rwl-format can also be used as input.</p>
+<p>The packages comes with two sample data sets to try the package.</p>
+<div id="hol_rom-roman-tree-ring-site-chronologies-from-hollstein" class="section level2">
+<h2>hol_rom: Roman tree-ring site chronologies from Hollstein</h2>
+<p>These are dendrochronological site chronologies published by Ernst
+Hollstein in the 1970s and 1980s <span class="citation">(Ernst Hollstein
+1972; E. Hollstein 1980)</span>. These 52 (pre) Roman site chronologies
+date between 502 BC and AD 550. This selection of (pre)Roman
+site-chronologies was also used in an earlier study.</p>
+</div>
+<div id="ring_visser_2021-roman-tree-ring-site-chronologies" class="section level2">
+<h2>RING_Visser_2021: Roman tree-ring site chronologies</h2>
+<p>Dendrochronological site chronologies published earlier <span class="citation">(Visser, n.d., 2021)</span>. These (pre) Roman site
+chronologies date between 520 BC and AD 663 and are based on the
+material from RING (full references to the source data can be found in
+the <a href="https://github.com/RonaldVisser/ProvenanceNetworks/blob/master/SupplementaryTables/Supplementary_table_1a_DOI_data.csv">supplementary
+data</a> <span class="citation">(Visser 2021)</span>.</p>
+<p>The series are named based on their location, species and type of
+standardisation For example: ABC_Q1M or ABC_Q1C consist of the same
+material from the site ABC (Abcoude), species Q(uercus), chronology 1
+and standardisation C(ofecha) and M(eans). See Visser(2021) for more
+explanation.</p>
+</div>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bunn2008" class="csl-entry">
+Bunn, Andrew G. 2008. <span>“A Dendrochronology Program Library in r
+(dplR).”</span> <em>Dendrochronologia</em> 26 (2): 115124.
+https://doi.org/<a href="https://doi.org/10.1016/j.dendro.2008.01.002">https://doi.org/10.1016/j.dendro.2008.01.002</a>.
+</div>
+<div id="ref-hollstein1980" class="csl-entry">
+Hollstein, E. 1980. <em>Mitteleuropäische Eichenchronologie. Trierer
+Dendrochronologische Forschungen Zur Archäologie Und
+Kunstgeschichte.</em> Trierer Grabungen Und Forschungen 11. Mainz am
+Rhein: Verlag Philipp von Zabern.
+</div>
+<div id="ref-hollstein1972" class="csl-entry">
+Hollstein, Ernst. 1972. <span>“Dendrochronologische Datierung von
+Hölzern Aus Wederath (Belginum).”</span> <em>Trierer Zeitschrift</em>
+35: 123–25.
+</div>
+<div id="ref-visser2021a" class="csl-entry">
+Visser, Ronald M. 2021. <span>“Dendrochronological Provenance Patterns.
+Network Analysis of Tree-Ring Material Reveals Spatial and Economic
+Relations of Roman Timber in the Continental North-Western
+Provinces.”</span> <em>Journal of Computer Applications in
+Archaeology</em> 4 (1): 230–53. <a href="https://doi.org/10.5334/jcaa.79">https://doi.org/10.5334/jcaa.79</a>.
+</div>
+<div id="ref-visser" class="csl-entry">
+———. n.d. <span>“Dendrochronological Provenance Patterns. Code and Data
+of Network Analysis of Tree-Ring Material.”</span> <a href="https://doi.org/10.5281/zenodo.10200361">https://doi.org/10.5281/zenodo.10200361</a>.
+</div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
