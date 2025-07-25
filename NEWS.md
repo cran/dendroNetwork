@@ -1,16 +1,24 @@
 # dendroNetwork: news {#dendroNetwork}
 
-## dendroNetwork 0.5.5 (development)
+## dendroNetwork 0.5.5
 
 ### New features
 
 ### Minor improvements
 
+-   dendronetwork: it is now possible to choose which correlation to use for creating network(s): using the correlation after the Hollstein(1980) transformation r_hol or the correlation without any transformation (r). The default is now r_hol.
+
 ### Bug Fixes
 
 ### Deprecated and defunct
 
+-   moved folder with paper to separate repository: <https://github.com/RonaldVisser/dendroNetwork_paper>
+
 ### Documentation fixes
+
+-   improved the documentation of the CPM en GN functions
+
+-   corrected minor typos in the documentation.
 
 ### Continuous integration
 

@@ -8,14 +8,16 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![pkgcheck](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml)
 [![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml)
 [![Status at rOpenSci Software Peer
 Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
 [![dendroNetwork status
 badge](https://ropensci.r-universe.dev/badges/dendroNetwork)](https://ropensci.r-universe.dev)
-[![status](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256/status.svg)](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256)
-[![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/dendroNetwork)](https://CRAN.R-project.org/package=dendroNetwork)
+[![Total CRAN
+Downloads](https://cranlogs.r-pkg.org/badges/grand-total/dendroNetwork)](https://cranlogs.r-pkg.org/badges/grand-total/dendroNetwork)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10636310.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
 
@@ -30,7 +32,8 @@ knowledge on the discipline and used jargon. There is an excellent
 website for the introduction of using R in dendrochronology:
 <https://opendendro.org/r/>. The basics of dendrochronology can be found
 in handbooks (Cook and Kariukstis 1990; Speer 2010) or on
-<https://www.dendrohub.com/>.
+<https://www.dendrohub.com/>. A list of R-packages for dendrochronology
+can be found here: <https://ronaldvisser.github.io/Dendro_R/>.
 
 ## Installation
 
@@ -56,10 +59,16 @@ more information). It is therefore recommended to install Cytoscape as
 well. Please follow the download and installation instructions for your
 operating system: <https://cytoscape.org/>.
 
-You can install the development version of dendroNetwork from
-[GitHub](https://github.com/ropensci/dendroNetwork) with:
+You can install the latest version of dendroNetwork from
+[CRAN](https://cran.r-project.org/package=dendroNetwork) or the
+development version from
+[R-universe](https://ropensci.r-universe.dev/dendroNetwork) by running
+one of the commands below:
 
 ``` r
+# CRAN
+install.packages("dendroNetwork")
+# R-Universe
 install.packages("dendroNetwork", repos = "https://ropensci.r-universe.dev")
 ```
 
@@ -79,6 +88,8 @@ papers, and on wikipedia for both
 [CPM](https://en.wikipedia.org/wiki/Clique_percolation_method) and the
 [Girvan-Newman
 algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
+
+    #> file:///C:/Users/rvi04/AppData/Local/Temp/RtmpI5Xi6K/file3f1469fd54cd/widget3f14a366b20.html screenshot completed
 
 ![](man/figures/README-flowchart_workflow-1.png)<!-- -->
 

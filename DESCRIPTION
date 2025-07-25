@@ -2,7 +2,7 @@ Package: dendroNetwork
 Type: Package
 Title: Create Networks of Dendrochronological Series using Pairwise
         Similarity
-Version: 0.5.4
+Version: 0.5.5
 Authors@R: 
     c(person(given = "Ronald", 
             family = "Visser", 
@@ -36,22 +36,24 @@ License: GPL (>= 3)
 biocViews: Visualization, GraphAndNetwork, ThirdPartyClient, Network
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0), DiagrammeR
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://github.com/ropensci/dendroNetwork,
-        https://ropensci.github.io/dendroNetwork/
+        https://docs.ropensci.org/dendroNetwork/
 BugReports: https://github.com/ropensci/dendroNetwork/issues
 NeedsCompilation: no
-Packaged: 2024-04-28 14:42:37 UTC; rvi04
-Author: Ronald Visser [aut, cre] (<https://orcid.org/0000-0001-6966-1729>),
-  Angelino Salentino [ctb] (<https://orcid.org/0000-0002-4763-3943>),
-  Andy Bunn [ctb] (<https://orcid.org/0000-0001-9027-2162>),
+Packaged: 2025-07-25 14:42:30 UTC; rvi04
+Author: Ronald Visser [aut, cre] (ORCID:
+    <https://orcid.org/0000-0001-6966-1729>),
+  Angelino Salentino [ctb] (ORCID:
+    <https://orcid.org/0000-0002-4763-3943>),
+  Andy Bunn [ctb] (ORCID: <https://orcid.org/0000-0001-9027-2162>),
   Kaija Gahm [rev] (Kaija Gahm reviewed the package for rOpenSci, see
     https://github.com/ropensci/software-review/issues/627#issuecomment-1993235710),
   Zachary Gajewski [rev] (Zachary Gajewski reviewed the package for
     rOpenSci, see
     https://github.com/ropensci/software-review/issues/627#issuecomment-2037644081)
 Repository: CRAN
-Date/Publication: 2024-04-30 08:40:10 UTC
+Date/Publication: 2025-07-25 15:20:02 UTC
